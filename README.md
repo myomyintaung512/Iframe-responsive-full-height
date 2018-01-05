@@ -47,7 +47,7 @@ Responsive full height for iframe document
                 element.attachEvent('on' + eventName, eventHandler);
             }
         }
-        // Listen to message from child window
+        // Listen to message from iframe document
         bindEvent(window, 'message', function (e) {
             // show iframe document height in #results div
             jQuery('#results').html(e.data);

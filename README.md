@@ -10,7 +10,7 @@ Responsive full height for iframe document
             // Make sure you are sending a string, and to stringify JSON
             window.parent.postMessage(msg, '*');
         };
-        // we sent body height to parent when DOM emelemt is ready
+        // sent body height to parent when DOM emelemt is ready
         // but Image height is not included yet. so it can be different with actual height
         jQuery(document).ready(function(){
           // sent document height to parent

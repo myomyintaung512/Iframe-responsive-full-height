@@ -7,7 +7,6 @@ Responsive full height for iframe document
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type='text/javascript'>
         var sendMessage = function (msg) {
-            // Make sure you are sending a string, and to stringify JSON
             window.parent.postMessage(msg, '*');
         };
         // sent body height to parent when DOM emelemt is ready
@@ -56,3 +55,5 @@ Responsive full height for iframe document
         });
     </script>
 ```
+### Demo Link
+[Iframe full height Demo](https://myomyintaung512.github.io/projects/iframe/ "Iframe full height Demo")

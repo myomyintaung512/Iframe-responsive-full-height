@@ -56,4 +56,4 @@ Responsive full height for iframe document
     </script>
 ```
 ### Demo Link
-[Iframe full height Demo](https://myomyintaung512.github.io/projects/iframe/ "Iframe full height Demo"){:target="_blank"}
+[Iframe full height Demo](https://myomyintaung512.github.io/projects/iframe/ "Iframe full height Demo")

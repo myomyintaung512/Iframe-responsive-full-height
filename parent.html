@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <title>Parent Window</title>
+
+</head>
+<body>
+    <h1>Parent Window</h1>
+    <p>Iframe Document Height</p>
+    <div id="results"></div>
+    <br/>
+    <!--
+      must apply this css to iframe to solve IOS iframe width issue
+      width: 1px; min-width: 100%; *width: 100%;
+      -->
+    <iframe id='myiframe' style="height: 100%; width: 1px; min-width: 100%; *width: 100%; border: 0 none transparent; display: block;" src="https://bespoke.thehourglass.com/" width="1" height="150" frameborder="0" scrolling="no"></iframe>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        // addEventListener support for IE8
+        function bindEvent(element, eventName, eventHandler) {
+            if (element.addEventListener){
+                element.addEventListener(eventName, eventHandler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, eventHandler);
+            }
+        }
+        // Listen to message from child window
+        bindEvent(window, 'message', function (e) {
+            // show iframe document height in #results div
+            jQuery('#results').html(e.data);
+            // adjust iframe height
+            jQuery('#myiframe').css('height', e.data);
+        });
+
+
+    </script>
+</body>
+</html>
